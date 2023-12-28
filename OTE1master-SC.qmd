@@ -1,6 +1,6 @@
 ---
 title: "Opportunity to Excel # 1"
-author: "Your Name Here"
+author: "Your Name Here between the Quotes"
 date: last-modified
 date-format: "[Last modified on] MMMM DD, YYYY HH:mm:ss zzz"
 format: 
