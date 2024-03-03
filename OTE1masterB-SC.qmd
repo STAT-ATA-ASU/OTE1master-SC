@@ -1,0 +1,212 @@
+---
+title: "Opportunity to Excel # 1"
+author: "Your Name Here"
+date: last-modified
+date-format: "[Last modified on] MMMM DD, YYYY HH:mm:ss zzz"
+format: 
+  html: default
+editor: source
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA, warning = FALSE, message = FALSE, fig.align = "center")
+library(scales)
+library(janitor)
+```
+
+::: callout-note
+**By committing and pushing this document to the class repository, you are acknowledging that all work is your own accept as noted in your acknowledgement statement at the end of the document. Please commit and push your work to the class repository no later than 2:00 pm, Thursday, March 7, 2024.  Once you accept the assignment, you have 24 hours to complete the work and push your results to your repository unless you accept the assignment after 2:00 pm, Wednesday, March 6, 2024, in which case the assignment is still due no later that 2:00 pm, Thursday, March 7, 2024.**
+:::
+
+::: {.callout-note icon="false" title="Problem 1 (4 pts.)"}
+Load the `tidyverse` and `ISLR` packages.  Use the `clean_names()` function from the `janitor` package on the `Carseats` data frame from the `ISLR` package and assign the results into an object named `carseats`.
+:::
+
+::: {.callout-important icon="false" collapse="false" title="Problem 1 Answers (4 pts.)"}
+```{r}
+# Your Code Here
+
+```
+:::
+
+::: {.callout-note icon="false" title="Problem 2 (2 pts.)"}
+Verify programmatically that the dimensions of `carseats` are 400 by 11.
+:::
+
+::: {.callout-important icon="false" collapse="false" title="Problem 2 Answers (2 pts.)"}
+```{r}
+# Your Code Here
+
+```
+:::
+
+::: {.callout-note icon="false" title="Problem 3 (8 pts.)"}
+Create a subset of `carseats` named `carseats_sub` using `dplyr` verbs where the `population` is between 150 thousand and 300 thousand inclusive and the `us` is `"Yes"`.  Verify programatically that the dimensions of `carseats_sub` are 75 by 11. 
+:::
+
+::: {.callout-important icon="false" collapse="false" title="Problem 3 Answers (8 pts.)"}
+```{r}
+# Your Code Here
+                                
+```
+:::
+
+::: {.callout-note icon="false" title="Problem 4 (10 pts.)"}
+Create a scatterplot of `sales` versus `comp_price` mapping `shelve_loc` to `color` using the `carseats_sub` data frame. Superimpose least squares regression lines on the scatterplot. Make sure to replace computer labels with descriptive labels. **Extra Credit (3 pts):** Make the `Good` least squares regression line `red3`, the `Medium` least squares regression line `gold`, and the `Bad` least squares regression line `steelblue1`.
+:::
+
+::: {.callout-important icon="false" collapse="false" title="Problem 4 Answers (10 pts.)"}
+```{r}
+#| label: "fig-q4"
+#| fig-cap: "Scatterplot of Unit sales versus competitors price"
+# Your Code Here - delete what is below and insert your code
+library(ggplot2)
+ggplot(data = data.frame(x = 1, y = 1), aes(x = x, y = y)) +
+  geom_point()
+```
+:::
+
+::: {.callout-note icon="false" title="Problem 5 (10 pts.)"}
+- Based on the scatterplot you created in @fig-q4 and an appropriate hypothesis test, is an interaction term needed in this model? 
+
+- Based on your answer about whether an interaction term is needed, should you use a parallel slopes model or a non-additive (interaction) model? 
+:::
+
+::: {.callout-important icon="false" collapse="false" title="Problem 5 Answers (10 pts.)"}
+**Your answer here:**
+
+* Your answer here. (3 pts.)
+
+* Your answer here. (2 pts.)
+
+```{r}
+# Your code here
+# 5 pts
+
+```
+:::
+
+::: {.callout-note icon="false" title="Problem 6 (10 pts.)"}
+Create histograms of `comp_price` by `shelve_loc` using `carseats_sub` such that the histogram for `Good` is displayed on top of the histogram for `Medium` which is on top of the histogram for `Bad` and all three histograms are in the same graphics device. Set the `binwidth` to 5 and outline the bins in each histogram in black.  **Extra credit (3 pts.):** Color the histogram for `Good` shelving locations `red3`, the histogram for `Medium` shelving locations `gold`, and the histogram for `Bad` shelving locations `steelblue1`. (Hint: `facet_grid()`)
+:::
+
+::: {.callout-important icon="false" collapse="false" title="Problem 6 Answers (10 pts.)"}
+```{r}
+#| label: "fig-q6"
+#| fig-cap: "Histograms of price charged by competitor in USD based on shelving locations"
+# Your Code Here
+
+```
+
+
+:::
+
+::: {.callout-note icon="false" title="Problem 7 (15 pts.)"}
+Characterize the distribution of `comp_price` for each level of shelving locations using the `carseats_sub` data frame.  Use inline R code to report the values in your answer.
+:::
+
+::: {.callout-important icon="false" collapse="false" title="Problem 7 Answers (15 pts.)"}
+```{r}
+# Your Code Here
+# 6 pts.
+
+```
+
+**Your answers here:**
+
+* **Your text answer with inline R code here.**
+
+* **Your text answer with inline R code here.**
+
+* **Your text answer with inline R code here.**
+:::
+
+::: {.callout-note icon="false" title="Problem 8 (9 pts.)"}
+Create a parallel slopes model for regressing `sales` onto `comp_price` using `carseats_sub` for the different levels in `shelve_loc`. Store the result in `mod_ps`.
+
+-   Report and interpret the slope of the model. (3 pts.)
+-   What is the model's $y$-intercept for `Medium` shelf locations? (3 pts.)
+:::
+
+::: {.callout-important icon="false" collapse="false" title="Problem 8 Answers"}
+```{r}
+# Your Code Here
+# 3 pts.
+
+```
+
+**Your answers here:**
+
+-   **Your text answer with inline R code here.** (3 pts.)
+-   **Your text answer with inline R code here.** (3 pts.)
+:::
+
+::: {.callout-note icon="false" title="Problem 9 (14 pts.)"}
+Given that 10% of first class letters from the UPS are late, what is the probability at least 90% of the next $n = 500$ letters will be on time?  Compute an exact answer, and verify your exact answer using simulation with a seed of 123:
+
+-   Define your random variable (1 pt.) and specify its distribution (1 pt.) **before** writing a mathematical statement (1 pt.). Show the code you use to obtain an exact answer (1 pt.).  Verify your exact answer using simulation.  Specifically, run 10,000 simulations of UPS delivering 500 first class letters where 90% of the letters are on-time (2 pts.).  How close was your simulation (percent difference from the truth) to the exact answer (1 pt.)?
+-   What are the expected value (1 pt.) and the standard deviation (1 pt.) of your random variable?  Verify your exact answers using simulation.  Use the 10,000 simulations of UPS delivering 500 first class letters where 90% of the letters are on-time to compute the expected value (2 pts.) and the standard deviation (1 pt.) of  the number of on-time letters.  How close were the values from your simulations  (percent difference from the truth) to the exact answers (1 pt./each)?
+:::
+
+::: {.callout-important icon="false" collapse="false" title="Problem 9 Answers (14 pts.)"}
+**Your answers here:**
+
+-   Your text answer here. (1 pt.)
+-   Your text answer here. (1 pt.)
+-   Your text answer here. (1 pt.)  
+-   Your text answer here. (1 pt.) 
+-   Your text answer here. (1 pt.) 
+
+```{r}
+# Your code here
+set.seed(123)
+
+
+```
+
+**Your text answers using inline R code here:**
+
+
+:::
+
+::: {.callout-note icon="false" title="Problem 10 (8 pts.)"}
+A gambler has in his pocket a fair coin and a two-headed coin. He selects one of the coins at random; when he flips it, it shows heads. What is the probability it is the fair coin? Define your events and show all work!
+:::
+
+::: {.callout-important icon="false" collapse="false" title="Problem 10 Answers (8 pts.)"}
+-   Define your event here. (1 pt.)
+-   Define your event here. (1 pt.)
+
+```{=tex}
+\begin{aligned}
+\text{Show all math/work here with LaTeX.}
+\end{aligned}
+```
+
+**Your text answer here:**
+
+
+
+
+:::
+
+::: {.callout-note icon="false" title="Problem 11 (10 pts.)"}
+A coin is tossed 25 times. Let $X=$ the number of tosses that result in heads ($H$). Consider the following rule for deciding whether or not the coin is fair. Judge the coin to be fair if $8\leq X \leq 17$. Judge the coin to be biased if either $X \leq 7$ or $X \geq 18$. What is the exact probability of judging the coin to be biased when it is actually fair (6 pts.)?  Verify your answer by simulating the experiment 100,000 times of flipping a single coin 25 times (4 pts.).  Report the percent difference between the exact answer and the simulated answer.  Use a seed of 321.
+:::
+
+::: {.callout-important icon="false" collapse="false" title="Problem 11 Answers (10 pts.)"}
+```{r}
+# Your Code Here
+set.seed(321)
+
+```
+
+**Your answer here:**
+
+**Your text answer using inline R code here**. (3 pts.)
+:::
+
+
+::: callout-note
+**Acknowledgement Statement: All work on this document is entirely my own.**
+:::
