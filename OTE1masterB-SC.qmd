@@ -15,7 +15,7 @@ library(janitor)
 ```
 
 ::: callout-note
-**By committing and pushing this document to the class repository, you are acknowledging that all work is your own accept as noted in your acknowledgement statement at the end of the document. Please commit and push your work to the class repository no later than 2:00 pm, Thursday, March 6, 2025.  Once you accept the assignment, you have 24 hours to complete the work and push your results to your repository unless you accept the assignment after 2:00 pm, Wednesday, March 5, 2024, in which case the assignment is still due no later that 2:00 pm, Thursday, March 6, 2025.**
+**By committing and pushing this document to the class repository, you are acknowledging that all work is your own accept as noted in your acknowledgement statement at the end of the document. Please commit and push your work to the class repository no later than 2:00 pm, Thursday, March 6, 2025.  Once you accept the assignment, you have 24 hours to complete the work and push your results to your repository unless you accept the assignment after 2:00 pm, Wednesday, March 5, 2025, in which case the assignment is still due no later that 2:00 pm, Thursday, March 6, 2025.**
 :::
 
 ::: {.callout-note icon="false" title="Problem 1 (4 pts.)"}
